@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The World Through My Eyes</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+
+        body {
+            margin: 0;
+            background-color: #eee4d8;
+            color: #30233c;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Cinzel', serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 75px;
+        }
+
+
+        .navbar {
+            background-color: #172d50;
+        }
+
+        .navbar-brand {
+            font-family: 'Cinzel', serif;
+            color: #e9d2ad !important;
+            font-weight: bold;
+        }
+
+        .nav-link {
+            color: white !important;
+            font-size: 13px;
+        }
+
+        .nav-link:hover {
+            color: #d8b77e !important;
+        }
+
+
+        .home {
+            height: 550px;
+
+            background:
+            linear-gradient(rgba(20,20,30,0.45),
+            rgba(20,20,30,0.55)),
+            url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG_Gt4JyoyG-c7w3ckTwClHQL4tbompM7aARkjieNSONPR3bpO03x4fdY&s=10")
+            center/cover;
+
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .home h1 {
+            font-size: 48px;
+            letter-spacing: 4px;
+        }
+
+        .home p {
+            letter-spacing: 3px;
+            font-size: 13px;
+        }
+
+        .btn-custom {
+            background-color: #d6b88d;
+            color: #30233c;
+            padding: 12px 25px;
+            border: none;
+        }
+
+
+        .destination {
+            padding: 70px 0;
+        }
+
+        .destination img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .destination h2 {
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .destination p {
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        .india {
+            background-color: #17345d;
+            color: white;
+        }
+
+        .japan {
+            background-color: #30233c;
+            color: white;
+        }
+
+        .italy {
+            background-color: #e7d8c8;
+            color: #30233c;
+        }
+
+        .place {
+            font-size: 11px;
+            letter-spacing: 3px;
+            margin-top: 20px;
+        }
+
+        .number {
+            font-size: 12px;
+            letter-spacing: 4px;
+        }
+
+        .technology {
+            background-color: #efd4af;
+            padding: 70px 0;
+        }
+
+        .technology h2 {
+            font-weight: bold;
+        }
+
+        .tech-card {
+            border: none;
+            height: 100%;
+            transition: 0.3s;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tech-card img {
+            height: 170px;
+            object-fit: cover;
+        }
+
+        .tech-card h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .ending {
+            padding: 100px 20px;
+
+            background:
+            linear-gradient(rgba(20,10,30,0.55),
+            rgba(20,10,30,0.65)),
+            url("https://media.istockphoto.com/id/471740166/photo/sunlight-from-the-porthole-on-airplane.jpg?s=612x612&w=0&k=20&c=7SGbpnTozYYCSSORAw8LerYG6QVXIupIOod4gRE7_As=")
+            center/cover;
+
+            color: white;
+        }
+
+        .ending-box {
+            background-color: rgba(48,35,60,0.9);
+            padding: 45px;
+            max-width: 750px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .ending-box p {
+            font-size: 14px;
+            line-height: 2;
+        }
+
+        footer {
+            background-color: #172d50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+        }
+
+        @media(max-width: 768px) {
+
+            .home h1 {
+                font-size: 30px;
+            }
+
+            .destination img {
+                height: 280px;
+            }
+
+            .destination {
+                padding: 35px 15px;
+            }
+
+            .ending-box {
+                padding: 25px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+<audio id="myAudio" controls>
+        <source src="https://www.image2url.com/r2/default/audio/1795666652404-a576b845-5ff8-4633-b147-6c31f3c2a3e2.mp3" type="audio/mpeg">
+        Your browser does not support audio.
+    </audio>
+
+    <br><br>
+
+    <button onclick="document.getElementById('myAudio').play()">
+        Play Audio
+    </button>
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="#home">
+        
+        </a>
+
+        <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse" data-bs-target="#menu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#india">India</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#japan">Japan</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#italy">Italy</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#technology">Technology</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#ending">About</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<section class="home" id="home">
+
+    <div class="container">
+
+        <p>YOUR NEXT ADVENTURE BEGINS HERE</p>
+
+        <h1>THE WORLD THROUGH MY EYES</h1>
+
+        <p>A JOURNEY ACROSS CULTURES, CUISINES & EXPERIENCES</p>
+
+        <p>DIGITAL TRAVEL DIARY | 2026</p>
+
+        <a href="#india" class="btn btn-custom mt-3">
+            Explore My Journey
+        </a>
+       
+    </div>
+
+</section>
+
+<section class="destination india" id="india">
+
+    <div class="container-fluid">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-5 p-5">
+
+                <span class="number">01 | INDIA</span>
+
+                <h2>INCREDIBLE INDIA</h2>
+
+                <p>
+                    My journey begins in India, a country known
+                    for its rich history, diverse cultures and
+                    colourful traditions.
+
+                    From the royal palaces of Rajasthan to the
+                    peaceful backwaters of Kerala, every
+                    destination has something unique to offer.
+
+                    I explored local markets, enjoyed traditional
+                    Indian food and experienced the warmth
+                    of its people.
+                </p>
+
+                <div class="place">
+                    JAIPUR . RAJASTHAN . INDIA
+                </div>
+
+            </div>
+
+            <div class="col-md-7 p-0">
+
+                <img src="D:\Documents\Pictures\Screenshots\Screenshot 2026-11-22 114707.png"
+                alt="Jaipur India">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="destination japan" id="japan">
+
+    <div class="container-fluid">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-5 p-5">
+
+                <span class="number">02 | JAPAN</span>
+
+                <h2>THE BEAUTY OF JAPAN</h2>
+
+                <p>
+                    My next destination was Japan, a country
+                    where ancient traditions blend beautifully
+                    with modern lifestyles.
+
+                    I explored peaceful temples, admired the
+                    cherry blossoms and experienced the calm
+                    atmosphere of Japanese gardens.
+
+                    I also tried local dishes like sushi and ramen.
+                </p>
+
+                <div class="place">
+                    KYOTO . JAPAN
+                </div>
+
+            </div>
+
+            <div class="col-md-7 p-0">
+
+                <img src="D:\Documents\Pictures\Screenshots\Screenshot 2026-11-22 153841.png"
+                alt="Japan">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="destination italy" id="italy">
+
+    <div class="container-fluid">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-5 p-5">
+
+                <span class="number">03 | ITALY</span>
+
+                <h2>EXPLORING ITALY</h2>
+
+                <p>
+                    Italy welcomed me with beautiful architecture,
+                    historic streets and a lively atmosphere.
+
+                    I enjoyed exploring its famous landmarks,
+                    tasting pizza and pasta, and experiencing
+                    its relaxed lifestyle.
+
+                    Every street had its own charm, making
+                    this destination truly unforgettable.
+                </p>
+
+                <div class="place">
+                    VENICE . ITALY
+                </div>
+
+            </div>
+
+            <div class="col-md-7 p-0">
+
+                <img src="D:\Documents\Pictures\Screenshots\Screenshot 2026-11-22 161125.png"
+                alt="Venice Italy">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="technology" id="technology">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="number">04 | TECHNOLOGY</span>
+
+            <h2>A WORLD OF INNOVATION</h2>
+
+            <p class="mt-3">
+                Technology has transformed the way we communicate,
+                learn and explore the world.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <div class="col-md-3 col-6">
+
+                <div class="card tech-card shadow-sm">
+
+                    <img src="D:\Documents\Pictures\Screenshots\Screenshot 2026-11-23 222942.png"
+                    class="card-img-top" alt="Computer">
+
+                    <div class="card-body">
+                        <h5>1. Computers</h5>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-3 col-6">
+
+                <div class="card tech-card shadow-sm">
+
+                    <img src="D:\Documents\Pictures\Screenshots\Screenshot 2026-11-23 223210.png"
+                    class="card-img-top" alt="Mobile phone">
+
+                    <div class="card-body">
+                        <h5>2. Mobile Phones</h5>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-3 col-6">
+
+                <div class="card tech-card shadow-sm">
+
+                    <img src="D:\Documents\Pictures\Screenshots\Screenshot 2026-11-23 223333.png"
+                    class="card-img-top" alt="Smartphone">
+
+                    <div class="card-body">
+                        <h5>3. Smartphones</h5>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-3 col-6">
+
+                <div class="card tech-card shadow-sm">
+
+                    <img src="D:\Documents\Pictures\Screenshots\Screenshot 2026-11-23 223437.png"
+                    class="card-img-top" alt="Smart gadgets">
+
+                    <div class="card-body">
+                        <h5>4. Smart Gadgets</h5>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <p class="mt-5">
+            During my travels, I used digital maps to find places,
+            smartphones to capture memories and the internet
+            to learn about different cultures.
+
+            Technology has become an essential part of modern travel.
+        </p>
+
+        <p class="number">
+            FROM COMPUTERS TO SMART GADGETS
+        </p>
+
+    </div>
+
+</section>
+
+<section class="ending" id="ending">
+
+    <div class="ending-box">
+
+        <span class="number">
+            THE END OF THIS CHAPTER
+        </span>
+
+        <h2 class="my-4">UNTIL WE MEET AGAIN</h2>
+
+        <p>
+            As this journey comes to an end, I realise that
+            travelling is about much more than reaching a
+            destination.
+
+            It is about discovering cultures, experiencing
+            new things, and creating memories that stay with us.
+
+            Every place has a story to tell, and every journey
+            leaves us with something valuable.
+
+            The world is full of wonders, and this is only
+            the beginning of many more adventures.
+        </p>
+
+        <h5 class="mt-4">
+            THANK YOU FOR TRAVELLING WITH ME!
+        </h5>
+
+        <a href="#home" class="btn btn-custom mt-3">
+            Back to Home
+        </a>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>THE WORLD THROUGH MY EYES</p>
+
+    <p>Digital Travel Diary | 2026</p>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+</body>
+</html>
